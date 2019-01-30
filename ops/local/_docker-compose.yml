@@ -1,0 +1,6 @@
+version: '3'
+services:
+  chainspace:
+    image: "decodeproject/chainspace-java-2-nodes:SNAPSHOT"
+    ports:
+      - "5000:5010"
