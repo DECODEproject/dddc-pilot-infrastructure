@@ -18,7 +18,7 @@ To bring an environment up follow these steps:
 
 1. Install docker
 2. Clone this repo
-3. Type `./xec.sh init_docker` (Only need to do this once)
+3. Type `./xec.sh docker init` (Only need to do this once)
 3. Type `./xec.sh up`
 
 At the end it will print a status of the services. If you want to see whats running at any time, simply type `./xec.sh status`.
