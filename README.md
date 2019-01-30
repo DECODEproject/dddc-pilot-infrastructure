@@ -8,7 +8,7 @@ In this initial version of the infrastructure, we are hosting everything on a si
 
 The following diagram shows the layout of the architecture. The code inthis repo is concerned with the "DECODE Infrastructure" box.
 
-<a href="docs/infrastructure-overview.png"><img width="800" src="docs/infrastructure-overview.png" \></a>
+[<img width="800" src="docs/infrastructure-overview.png" ></img>](docs/infrastructure-overview.png)
 
 The diagram shows the relevant docker containers and components and the publically accessible apis, along with the port numbers that need to be exposed.
 
