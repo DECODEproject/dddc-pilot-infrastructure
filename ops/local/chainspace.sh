@@ -23,6 +23,11 @@ function status {
     echo -e "\nStatus of local chainspace api @ ${CHAINSPACE_API_URL}: ${HTTP_STATUS}\n"
 }
 
+function docker-logs {
+    LOGS_FOLLOW=${1: }
+    ${DOCKER_COMMAND} logs ${LOGS_FOLLOW}
+}
+
 function logs {
     LOG_SOURCE=$1
     shift
@@ -57,7 +62,7 @@ function restart {
 }
 
 function shell {
-    ${DOCKER_COMMAND} exec chainspace sh
+    ${DOCKER_COMMAND} exec chainspace bash
 }
 
 

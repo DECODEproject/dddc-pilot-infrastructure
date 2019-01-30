@@ -21,4 +21,26 @@ function ssh {
     ./ops/local/ssh-to.sh $@
 }
 
+function docker {
+    ./ops/local/docker.sh $@
+}
+
+function chainspace {
+    ./ops/local/chainspace.sh $@
+}
+
+
+function up {
+    chainspace start
+}
+
+function down {
+    chainspace stop
+}
+
+function status {
+    chainspace status
+}
+
+
 lib/process_commands $@
