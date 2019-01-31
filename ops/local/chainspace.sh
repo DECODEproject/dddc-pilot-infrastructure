@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -e # Exit script if anything fails
+#set -e # Exit script if anything fails
 set -u # unset variables cause an error
 set -o pipefail # https://coderwall.com/p/fkfaqq/safer-bash-scripts-with-set-euxo-pipefail
 #set -x # for debugging each command
