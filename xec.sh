@@ -42,5 +42,23 @@ function status {
     chainspace status
 }
 
+function ping-prod {
+    LOCAL_CONFIG=~/.decidim-env.sh
+
+    if [[ -e ${LOCAL_CONFIG} ]]; then
+        source ${LOCAL_CONFIG}
+    else
+        echo -e "Could not find the local source config [${LOCAL_CONFIG}, create it with the following structure \
+              \nPROD_HOST=<the ip / dns of the production host box \
+              \nPROD_USER=<your user name on the production host box \
+              \n you can do this in one line like  echo -e \"export PROD_HOST=<host>\\\nexport PROD_USER=<user>\" > ~/.decidim-env.sh\
+              \n you will also need jq installed to see pretty printing."
+        exit 1
+    fi
+
+    echo "$ curl -sv http://${PROD_HOST}:5000/api/1.0/ | jq"
+    curl -sv http://${PROD_HOST}:5000/api/1.0/ | jq
+
+}
 
 lib/process_commands $@
